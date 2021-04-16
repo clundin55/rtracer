@@ -41,7 +41,7 @@ pub fn hit_sphere(center: &Point, radius: f32, r: &Ray) -> f32 {
 
 pub fn create_world() {
     // Image
-    let aspect_ratio = 3.0 / 20.0;
+    let aspect_ratio = 3.0 / 2.0;
     let image_width = 1200;
     let image_height = (image_width as f32 / aspect_ratio) as u32;
 
@@ -56,15 +56,7 @@ pub fn create_world() {
     let lookat = Point::new(0.0, 0.0, 0.0);
     let vup = Vec3::new(0.0, 1.0, 0.0);
 
-    let camera = Camera::new(
-        lookfrom,
-        lookat,
-        vup,
-        10.0,
-        aspect_ratio,
-        0.1,
-        (lookfrom - lookat).length(),
-    );
+    let camera = Camera::new(lookfrom, lookat, vup, 20.0, aspect_ratio, 0.1, 10.0);
 
     println!("P3\n{} {} \n{}\n", image_width, image_height, 255);
     let mut color_vec: Vec<Color> = Vec::new();
