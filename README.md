@@ -11,3 +11,7 @@ To run the code just simply run `cargo run --release > render.ppm`. Since the co
 redirect the application to a file in order to save the work.
 
 Note that the only scene currently available is fairly heavy and may take some time to render.
+
+# Sample Image
+Running the render will provide this image.
+![](images/example.png)
